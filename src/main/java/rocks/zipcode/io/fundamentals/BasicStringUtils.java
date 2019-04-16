@@ -1,12 +1,14 @@
 package rocks.zipcode.io.fundamentals;
 
+import rocks.zipcode.io.arrays.ArrayUtils;
+
 public class BasicStringUtils {
     /**
      * @param chars - characters used to instantiate a new string object
      * @return new String which wraps the arguments passed in
      */
     public static String getString(char[] chars) {
-        return null;
+        return String.valueOf(chars);
     }
 
     /**
@@ -14,7 +16,8 @@ public class BasicStringUtils {
      * @return new String which wraps the arguments passed in
      */
     public static String getString(Character[] chars) {
-        return null;
+        char[] array = ArrayUtils.unbox(chars);
+        return getString(array);
     }
 
     /**
@@ -22,8 +25,10 @@ public class BasicStringUtils {
      * @return identical string with lowercase and uppercase vowels removed
      */
     public static String removeAllVowels(String string) {
-        return null;
+        String result = string.replaceAll("[AaEeIiOoUu]", "");
+        return result;
     }
+
 
     /**
      * @param string             - string to be manipulated
@@ -31,6 +36,9 @@ public class BasicStringUtils {
      * @return
      */
     public static String removeSpecifiedCharacters(String string, String charactersToRemove) {
-        return null;
+      String result = string.replaceAll(charactersToRemove,"");
+      return result;
     }
+
+
 }

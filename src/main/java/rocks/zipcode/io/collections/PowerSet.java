@@ -18,6 +18,7 @@ public class PowerSet<TypeOfSet> {
      * @return the powerset of `originalSet`
      */
     public Set<Set<TypeOfSet>> permute() {
+
         return null;
     }
 
