@@ -1,5 +1,7 @@
 package rocks.zipcode.io.collections;
 
+import rocks.zipcode.io.arrays.ArrayUtils;
+
 import java.util.*;
 import java.util.stream.Collectors;
 

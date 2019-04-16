@@ -27,12 +27,15 @@ public class StringUtils {
      * @return near-identical string whose characters at specified indices are capitalized
      */
     public static String upperCaseIndices(String string, Integer... indices) {
-        String result = "";
-        char cap = Character.toUpperCase(string.charAt(indices.length));
+        String result = string;
+        for (Integer index : indices) {
+            //Character char = string.charAt(index);
+            //result =
 
-        return cap + string.substring(1);
+        }
+        return result;
     }
-
+    //for every index char = index replaceAll result, Character.toUpperCase(character), index)
     /**
      * @param stringToBeManipulated - string to be evaluated
      * @param valueToBeInserted     - value to insert into string
@@ -57,16 +60,9 @@ public class StringUtils {
      * @return near-identical string with character at `index` replaced with `replacementValue`
      */
     public static String replaceAtIndex(String stringToBeManipulated, Character replacementValue, Integer index) {
-        String result = "";
-        for (int i = 0; i < stringToBeManipulated.length(); i++) {
-            result += (stringToBeManipulated.charAt(i));
-            if (i == index) {
-                i = replacementValue;
-                result+= i;
-                System.out.println(result);
-            }
-        }
-        return result;
+        StringBuilder sb = new StringBuilder(stringToBeManipulated);
+        sb.setCharAt(index, replacementValue);
+        return sb.toString();
     }
 }
 
